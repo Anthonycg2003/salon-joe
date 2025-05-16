@@ -6,31 +6,31 @@ const HomePage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-pink-100 to-white">
       {/* Hero Section */}
-      <section className="relative h-[80vh] bg-[url('/img/salon-bg.jpg')] bg-cover bg-center">
-        <div className="absolute inset-0 bg-gradient-to-b from-black to-pink-200 flex items-center justify-center">
-          <div className="text-center text-white max-w-4xl px-4">
+      <section className="relative h-[100vh] md:h-[80vh] bg-[url('/img/salon-bg.jpg')] bg-cover bg-center">
+        <div className="absolute inset-0 bg-gradient-to-b from-black via-black/90 to-pink-200 flex items-center justify-center">
+          <div className="text-center text-white w-full max-w-4xl px-4">
             <div className="mb-6">
-              <h1 className="text-8xl font-serif mb-2">
+              <h1 className="text-6xl md:text-8xl font-serif mb-2">
                 <span className="text-pink-400">Y</span>
                 <span className="text-white">OHA</span>
               </h1>
-              <p className="text-2xl text-pink-200 tracking-wider">
+              <p className="text-xl md:text-2xl text-pink-200 tracking-wider">
                 Style & Beauty Studio
               </p>
             </div>
-            <p className="text-2xl mb-8 text-gray-200">
+            <p className="text-xl md:text-2xl mb-8 text-gray-200">
               Donde la belleza se encuentra con la elegancia
             </p>
-            <div className="flex gap-4 justify-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
               <Link
                 href="/services/turnos"
-                className="bg-pink-500 text-white px-8 py-3 rounded-full hover:bg-pink-600 transition-colors transform hover:scale-105 duration-200"
+                className="w-full md:w-auto bg-pink-500 text-white px-8 py-3 rounded-full hover:bg-pink-600 transition-colors transform hover:scale-105 duration-200 text-center"
               >
                 Reserva tu turno
               </Link>
               <Link
                 href="#servicios"
-                className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full hover:bg-white/10 transition-all"
+                className="w-full md:w-auto bg-transparent border-2 border-white text-white px-8 py-3 rounded-full hover:bg-white/10 transition-all text-center"
               >
                 Nuestros Servicios
               </Link>
