@@ -3,25 +3,90 @@ import React, { useRef, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Text, useTexture } from "@react-three/drei";
 
-const texturas = [
+interface Textura {
+  id: number;
+  name: string;
+  url: string;
+}
+
+interface TazaConAsaProps {
+  imageUrl: string;
+  nombre: string;
+  numero: string;
+}
+
+const texturas: Textura[] = [
   { id: 1, name: "Textura 1", url: "/img/barsa.jpg" },
   { id: 2, name: "Textura 2", url: "/img/madrid.png" },
 ];
 
-const HomePage = () => {
-  const [img, setImage] = useState(texturas[0].url);
-  const [nombre, setNombre] = useState("Nombre");
-  const [numero, setNumero] = useState("10");
+const TazaConAsa: React.FC<TazaConAsaProps> = ({
+  imageUrl,
+  nombre,
+  numero,
+}) => {
+  const tazaRef = useRef(null);
+  const texture = useTexture(imageUrl);
+  const textColor = imageUrl.includes("madrid") ? "black" : "yellow";
 
-  /*function handleImageUpload(e) {
-    const file = e.target.files[0];
-    if (!file) return;
-    const reader = new FileReader();
-    reader.onload = (event) => {
-      setImage(event.target?.result);
-    };
-    reader.readAsDataURL(file);
-  }*/
+  return (
+    <group
+      ref={tazaRef}
+      position={[0, 1, 0]}
+      scale={0.6}
+      rotation={[0, -Math.PI / 2, 0]}
+    >
+      <mesh>
+        <cylinderGeometry args={[1, 1, 2, 32]} />
+        <meshStandardMaterial map={texture} />
+      </mesh>
+
+      <Text
+        position={[1, 0.5, -0.1]}
+        fontSize={0.3}
+        color={textColor}
+        anchorX="center"
+        anchorY="middle"
+        rotation={[0, Math.PI / 2, 0]}
+        font="/fonts/VarsityTeam.otf"
+      >
+        {nombre}
+      </Text>
+
+      <Text
+        position={[1, -0.3, -0.1]}
+        fontSize={1.2}
+        color={textColor}
+        anchorX="center"
+        anchorY="middle"
+        rotation={[0, Math.PI / 2, 0]}
+        font="/fonts/Varsity.ttf"
+      >
+        {numero}
+      </Text>
+
+      <mesh position={[0, -1, 0]}>
+        <cylinderGeometry args={[1, 1, 0.01, 32]} />
+        <meshStandardMaterial color="white" />
+      </mesh>
+
+      <mesh position={[0, 1, 0]}>
+        <cylinderGeometry args={[1, 1, 0.01, 32]} />
+        <meshStandardMaterial color="white" />
+      </mesh>
+
+      <mesh position={[0, 0, 1]} rotation={[0, Math.PI / 2, 0]}>
+        <torusGeometry args={[0.5, 0.1, 16, 100, Math.PI * 1.5]} />
+        <meshStandardMaterial color="white" />
+      </mesh>
+    </group>
+  );
+};
+
+const HomePage: React.FC = () => {
+  const [img, setImage] = useState<string>(texturas[0].url);
+  const [nombre, setNombre] = useState<string>("Nombre");
+  const [numero, setNumero] = useState<string>("10");
 
   return (
     <div className="h-fit bg-gradient-to-t from-white to-blue-500 p-4">
@@ -36,6 +101,7 @@ const HomePage = () => {
               <div className="grid grid-cols-2 gap-4">
                 {texturas.map((textura) => (
                   <button
+                    type="button"
                     key={textura.id}
                     onClick={() => setImage(textura.url)}
                     className={`p-2 rounded-lg border-2 ${
@@ -99,12 +165,7 @@ const HomePage = () => {
           </div>
         </div>
         <div className="w-full h-[600px]">
-          <Canvas
-            camera={{
-              position: [0, 0, 5], // Ajustado para ver la taza de frente
-              fov: 50,
-            }}
-          >
+          <Canvas camera={{ position: [0, 0, 5], fov: 50 }}>
             <ambientLight intensity={2} />
             <pointLight position={[10, 10, 10]} />
             <TazaConAsa imageUrl={img} nombre={nombre} numero={numero} />
@@ -112,8 +173,8 @@ const HomePage = () => {
               enablePan={false}
               enableZoom={true}
               enableRotate={true}
-              minPolarAngle={Math.PI / 3} // Límite superior de rotación (60 grados)
-              maxPolarAngle={Math.PI / 1.5} // Límite inferior de rotación (120 grados)
+              minPolarAngle={Math.PI / 3}
+              maxPolarAngle={Math.PI / 1.5}
               rotateSpeed={0.5}
             />
           </Canvas>
@@ -122,72 +183,5 @@ const HomePage = () => {
     </div>
   );
 };
-
-function TazaConAsa({ imageUrl, nombre, numero }) {
-  const tazaRef = useRef(null);
-  const texture = useTexture(imageUrl);
-
-  // Determinar el color del texto basado en la textura
-  const textColor = imageUrl.includes("madrid") ? "black" : "yellow";
-
-  return (
-    <group
-      ref={tazaRef}
-      position={[0, 1, 0]} // Centrado en el origen
-      scale={0.6}
-      rotation={[0, -Math.PI / 2, 0]} // Rotado 90 grados para ver el frente
-    >
-      {/* Cuerpo de la taza */}
-      <mesh>
-        <cylinderGeometry args={[1, 1, 2, 32]} />
-        <meshStandardMaterial map={texture} />
-      </mesh>
-
-      {/* Texto frontal nombre */}
-      <Text
-        position={[1, 0.5, -0.1]}
-        fontSize={0.3}
-        color={textColor}
-        anchorX="center"
-        anchorY="middle"
-        rotation={[0, Math.PI / 2, 0]}
-        font="/fonts/VarsityTeam.otf"
-      >
-        {nombre}
-      </Text>
-
-      {/* Texto frontal número */}
-      <Text
-        position={[1, -0.3, -0.1]}
-        fontSize={1.2}
-        color={textColor}
-        anchorX="center"
-        anchorY="middle"
-        rotation={[0, Math.PI / 2, 0]}
-        font="/fonts/Varsity.ttf"
-      >
-        {numero}
-      </Text>
-
-      {/* Base */}
-      <mesh position={[0, -1, 0]}>
-        <cylinderGeometry args={[1, 1, 0.01, 32]} />
-        <meshStandardMaterial color="white" />
-      </mesh>
-
-      {/* Tapa */}
-      <mesh position={[0, 1, 0]}>
-        <cylinderGeometry args={[1, 1, 0.01, 32]} />
-        <meshStandardMaterial color="white" />
-      </mesh>
-
-      {/* Asa */}
-      <mesh position={[0, 0, 1]} rotation={[0, Math.PI / 2, 0]}>
-        <torusGeometry args={[0.5, 0.1, 16, 100, Math.PI * 1.5]} />
-        <meshStandardMaterial color="white" />
-      </mesh>
-    </group>
-  );
-}
 
 export default HomePage;
