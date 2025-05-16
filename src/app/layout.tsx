@@ -70,14 +70,13 @@ export default function RootLayout({
               </div>
               <div>
                 <h4 className="text-lg font-bold mb-3">Horarios</h4>
-                <p className="text-gray-300">Lunes a Viernes: 9:00 - 20:00</p>
-                <p className="text-gray-300">Sábados: 9:00 - 18:00</p>
-                <p className="text-gray-300">Domingos: Cerrado</p>
+                <p className="text-gray-300">Lunes a Sábados: 10 am a 8 pm</p>
+                <p className="text-gray-300">Domingos: 10 am a 5 pm</p>
               </div>
               <div>
                 <h4 className="text-lg font-bold mb-3">Contacto</h4>
-                <p className="text-gray-300">📞 (123) 456-7890</p>
-                <p className="text-gray-300">📍 Calle Principal 123, Ciudad</p>
+                <p className="text-gray-300">📞 (+53) 53342152</p>
+                <p className="text-gray-300">📍 Vedado, La Habana</p>
                 <p className="text-gray-300">✉️ info@yoha.studio</p>
               </div>
             </div>

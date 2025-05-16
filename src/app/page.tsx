@@ -65,7 +65,7 @@ const HomePage = () => {
                 </h3>
                 <p className="text-gray-600 mb-4">
                   Reserva tu turno para cualquiera de nuestros servicios
-                  profesionales: cortes, peinados, tintes, manicure y más.
+                  profesionales: cortes, peinados, tintes y más.
                 </p>
                 <button className="mt-2 bg-pink-500 text-white px-6 py-2 rounded-full hover:bg-pink-600 transition-all duration-300 transform hover:scale-105">
                   Reservar Turno
@@ -101,6 +101,42 @@ const HomePage = () => {
         </div>
       </section>
 
+      {/* Misión y Visión Section */}
+      <section className="py-20 px-4 bg-white">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-4xl font-bold text-center mb-16">
+            Nuestra Esencia
+          </h2>
+          <div className="grid md:grid-cols-2 gap-12">
+            <div className="text-center p-8 bg-gradient-to-br from-pink-50 to-purple-50 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="bg-pink-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-3xl">🎯</span>
+              </div>
+              <h3 className="text-2xl font-semibold mb-4">Misión</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Nuestra misión se centra en ofrecer servicios de belleza
+                integrales con un enfoque en el bienestar y la salud del
+                cliente. Este compromiso con la calidad del servicio asegura una
+                experiencia positiva para el cliente en manos de profesionales
+                que superen sus expectativas y exigencias
+              </p>
+            </div>
+
+            <div className="text-center p-8 bg-gradient-to-br from-pink-50 to-purple-50 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-3xl">🌟</span>
+              </div>
+              <h3 className="text-2xl font-semibold mb-4">Visión</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Ser un salón reconocido, distinguido y demandante, en el mundo
+                de la belleza, estando a la vanguardia y siempre en contacto con
+                la tendencia y la actualidad
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section className="bg-gradient-to-r from-pink-50 to-purple-50 py-16 px-4">
         <div className="container mx-auto max-w-4xl text-center">
@@ -108,11 +144,11 @@ const HomePage = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
               <p className="text-2xl mb-2">📞</p>
-              <p className="text-xl">(123) 456-7890</p>
+              <p className="text-xl">(+53) 53342152</p>
             </div>
             <div className="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
               <p className="text-2xl mb-2">📍</p>
-              <p className="text-xl">Calle Principal 123, Ciudad</p>
+              <p className="text-xl">Vedado, La Habana</p>
             </div>
             <div className="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
               <p className="text-2xl mb-2">✉️</p>

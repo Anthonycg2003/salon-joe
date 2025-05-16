@@ -22,8 +22,20 @@ const TurnosPage: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
-    // Aquí iría la lógica para procesar la reserva
-    console.log(formData);
+
+    // Formatear el mensaje para WhatsApp
+    const mensaje = encodeURIComponent(
+      `Hola soy ${formData.nombre} deseo reservar el servicio de ${formData.servicio} el día ${formData.fecha} a la hora ${formData.hora}`
+    );
+
+    // Número de teléfono del salón (reemplaza XXXXXXXXXX con el número real)
+    const telefono = "5353342152";
+
+    // Crear el enlace de WhatsApp
+    const whatsappUrl = `https://wa.me/${telefono}?text=${mensaje}`;
+
+    // Abrir WhatsApp en una nueva pestaña
+    window.open(whatsappUrl, "_blank");
   };
 
   const handleInputChange = (
@@ -52,7 +64,7 @@ const TurnosPage: React.FC = () => {
                 htmlFor="nombre"
                 className="block text-sm font-medium text-gray-700"
               >
-                Nombre completo
+                Nombre
               </label>
               <input
                 id="nombre"
@@ -65,41 +77,7 @@ const TurnosPage: React.FC = () => {
               />
             </div>
 
-            <div>
-              <label
-                htmlFor="email"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Email
-              </label>
-              <input
-                id="email"
-                name="email"
-                type="email"
-                value={formData.email}
-                onChange={handleInputChange}
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-pink-500 focus:ring-pink-500"
-                required
-              />
-            </div>
-
-            <div>
-              <label
-                htmlFor="telefono"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Teléfono
-              </label>
-              <input
-                id="telefono"
-                name="telefono"
-                type="tel"
-                value={formData.telefono}
-                onChange={handleInputChange}
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-pink-500 focus:ring-pink-500"
-                required
-              />
-            </div>
+            <div></div>
 
             <div>
               <label
@@ -120,7 +98,6 @@ const TurnosPage: React.FC = () => {
                 <option value="corte">Corte de cabello</option>
                 <option value="peinado">Peinado</option>
                 <option value="tinte">Tinte</option>
-                <option value="manicure">Manicure</option>
               </select>
             </div>
 
