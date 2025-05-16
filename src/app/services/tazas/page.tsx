@@ -13,7 +13,7 @@ const HomePage = () => {
   const [nombre, setNombre] = useState("Nombre");
   const [numero, setNumero] = useState("10");
 
-  function handleImageUpload(e) {
+  /*function handleImageUpload(e) {
     const file = e.target.files[0];
     if (!file) return;
     const reader = new FileReader();
@@ -21,7 +21,7 @@ const HomePage = () => {
       setImage(event.target?.result);
     };
     reader.readAsDataURL(file);
-  }
+  }*/
 
   return (
     <div className="h-fit bg-gradient-to-t from-white to-blue-500 p-4">
@@ -58,7 +58,6 @@ const HomePage = () => {
               <p className="mb-2">O sube tu propia textura:</p>
               <input
                 type="file"
-                onChange={handleImageUpload}
                 accept="image/*"
                 className="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
               />
