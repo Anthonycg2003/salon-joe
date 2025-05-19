@@ -42,12 +42,14 @@ export default function RootLayout({
                 >
                   Reservar Turno
                 </Link>
-                <Link
-                  href="/services/tazas"
-                  className="text-gray-700 hover:text-pink-600 transition-colors"
-                >
-                  Tazas Personalizadas
-                </Link>
+                <div className="relative group">
+                  <span className="text-gray-400 cursor-not-allowed flex items-center">
+                    Tazas Personalizadas
+                    <span className="ml-2 text-xs bg-pink-100 text-pink-600 px-2 py-1 rounded-full">
+                      Próximamente
+                    </span>
+                  </span>
+                </div>
               </div>
             </div>
           </nav>

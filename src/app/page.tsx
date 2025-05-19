@@ -7,7 +7,7 @@ const HomePage = () => {
     <div className="min-h-screen bg-gradient-to-b from-pink-100 to-white">
       {/* Hero Section */}
       <section className="relative h-[100vh] md:h-[80vh] bg-[url('/img/salon-bg.jpg')] bg-cover bg-center">
-        <div className="absolute inset-0 bg-gradient-to-b from-black via-black/90 to-pink-200 flex items-center justify-center">
+        <div className="absolute inset-0 bg-gradient-to-b from-black to-pink-200 flex items-center justify-center">
           <div className="text-center text-white w-full max-w-4xl px-4">
             <div className="mb-6">
               <h1 className="text-6xl md:text-8xl font-serif mb-2">
@@ -74,27 +74,32 @@ const HomePage = () => {
             </div>
           </Link>
 
-          <Link href="/services/tazas">
-            <div className="group bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-              <div className="relative">
+          <Link href="#" className="cursor-not-allowed">
+            <div className="group bg-white rounded-lg shadow-lg overflow-hidden relative">
+              <div className="absolute inset-0 bg-black/70 z-10 flex flex-col items-center justify-center text-white">
+                <span className="text-2xl font-bold mb-2">Próximamente</span>
+                <span className="text-sm text-gray-300">
+                  Servicio en desarrollo
+                </span>
+              </div>
+              <div className="relative blur-[2px]">
                 <img
                   src="/img/custom-mugs.jpg"
                   alt="Tazas Personalizadas"
-                  className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                  className="w-full h-64 object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </div>
-              <div className="p-8">
-                <h3 className="text-2xl font-semibold mb-3">
-                  Tazas Personalizadas
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Crea tu taza personalizada con diseños únicos. El regalo
-                  perfecto para cualquier ocasión.
-                </p>
-                <button className="mt-2 bg-pink-500 text-white px-6 py-2 rounded-full hover:bg-pink-600 transition-all duration-300 transform hover:scale-105">
-                  Personalizar Taza
-                </button>
+                <div className="p-8">
+                  <h3 className="text-2xl font-semibold mb-3">
+                    Tazas Personalizadas
+                  </h3>
+                  <p className="text-gray-600 mb-4">
+                    Crea tu taza personalizada con diseños únicos. El regalo
+                    perfecto para cualquier ocasión.
+                  </p>
+                  <button className="mt-2 bg-pink-500 text-white px-6 py-2 rounded-full opacity-50 cursor-not-allowed">
+                    Personalizar Taza
+                  </button>
+                </div>
               </div>
             </div>
           </Link>
