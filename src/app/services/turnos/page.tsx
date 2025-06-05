@@ -115,9 +115,27 @@ const TurnosPage: React.FC = () => {
                 required
               >
                 <option value="">Selecciona un servicio</option>
-                <option value="corte">Corte de cabello</option>
-                <option value="peinado">Peinado</option>
-                <option value="tinte">Tinte</option>
+                <option value="corte">
+                  Corte de cabello para damas y caballeros
+                </option>
+                <option value="alisado">
+                  Tratamiento de alisado del cabello
+                </option>
+                <option value="hidratacion">
+                  Tratamientos de hidratación y reparación capilar
+                </option>
+                <option value="botox">Tratamientos de Botox y keratina</option>
+                <option value="rizado">
+                  Tratamiento de rizado del cabello
+                </option>
+                <option value="tinte">
+                  Aplicación de tintes con protección plex
+                </option>
+                <option value="mechas">
+                  Trabajos de mechas y degradados de color en todas las
+                  modalidades de acuerdo a lo tradicional y las nuevas
+                  tendencias
+                </option>
               </select>
             </div>
 
