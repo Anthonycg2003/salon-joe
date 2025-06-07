@@ -3,56 +3,40 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
+import galleryData from "../data/jobs.json";
 
 interface Photo {
   id: number;
   url: string;
   title: string;
   category: string;
+  description: string;
 }
 
 const PHOTOS_PER_PAGE = 9;
 
 const GaleriaPage = () => {
-  const [allPhotos, setAllPhotos] = useState<Photo[]>([]);
   const [displayedPhotos, setDisplayedPhotos] = useState<Photo[]>([]);
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(false);
   const [hasMore, setHasMore] = useState(true);
   const { ref, inView } = useInView();
 
-  // Cargar todas las fotos al inicio
-  useEffect(() => {
-    const fetchPhotos = async () => {
-      try {
-        const response = await fetch("/api/gallery");
-        const photos = await response.json();
-        setAllPhotos(photos);
-      } catch (error) {
-        console.error("Error fetching photos:", error);
-      }
-    };
-
-    fetchPhotos();
-  }, []);
-
   const loadMorePhotos = () => {
     if (loading || !hasMore) return;
 
     setLoading(true);
 
-    // Simular delay para una mejor experiencia de usuario
     setTimeout(() => {
       const startIndex = (page - 1) * PHOTOS_PER_PAGE;
       const endIndex = page * PHOTOS_PER_PAGE;
-      const newPhotos = allPhotos.slice(startIndex, endIndex);
+      const newPhotos = galleryData.photos.slice(startIndex, endIndex);
 
       if (newPhotos.length > 0) {
         setDisplayedPhotos((prev) => [...prev, ...newPhotos]);
         setPage((prev) => prev + 1);
 
-        // Verificar si quedan más fotos para cargar
-        if (endIndex >= allPhotos.length) {
+        if (endIndex >= galleryData.photos.length) {
           setHasMore(false);
         }
       } else {
@@ -60,14 +44,14 @@ const GaleriaPage = () => {
       }
 
       setLoading(false);
-    }, 500); // Medio segundo de delay
+    }, 500);
   };
 
   useEffect(() => {
-    if (inView && hasMore && allPhotos.length > 0) {
+    if (inView && hasMore) {
       loadMorePhotos();
     }
-  }, [inView, allPhotos]);
+  }, [inView]);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-pink-50 to-white py-20">
@@ -92,8 +76,11 @@ const GaleriaPage = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                   <div className="p-4 w-full">
-                    <h3 className="text-white font-semibold">YOHA Estilo</h3>
+                    <h3 className="text-white font-semibold">{photo.title}</h3>
                     <p className="text-pink-200 text-sm">{photo.category}</p>
+                    <p className="text-gray-300 text-xs mt-1">
+                      {photo.description}
+                    </p>
                   </div>
                 </div>
               </div>

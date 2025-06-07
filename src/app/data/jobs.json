@@ -1,0 +1,200 @@
+{
+  "photos": [
+    {
+      "id": 1,
+      "url": "/img/gallery/trabajo-1.jpg",
+      "title": "Balayage Caramelo",
+      "category": "Color",
+      "description": "Técnica de mechas suaves y naturales"
+    },
+    {
+      "id": 2,
+      "url": "/img/gallery/trabajo-2.jpg",
+      "title": "Alisado Profesional",
+      "category": "Tratamiento",
+      "description": "Tratamiento de alisado con keratina"
+    },
+    {
+      "id": 3,
+      "url": "/img/gallery/trabajo-3.jpg",
+      "title": "Bob Texturizado",
+      "category": "Corte",
+      "description": "Corte moderno con textura y movimiento"
+    },
+    {
+      "id": 4,
+      "url": "/img/gallery/trabajo-4.jpg",
+      "title": "Mechas Babylights",
+      "category": "Color",
+      "description": "Mechas finas y naturales"
+    },
+    {
+      "id": 5,
+      "url": "/img/gallery/trabajo-5.jpg",
+      "title": "Hidratación Profunda",
+      "category": "Tratamiento",
+      "description": "Tratamiento nutritivo e hidratante"
+    },
+    {
+      "id": 6,
+      "url": "/img/gallery/trabajo-6.jpg",
+      "title": "Peinado Romántico",
+      "category": "Peinado",
+      "description": "Recogido elegante para eventos"
+    },
+    {
+      "id": 7,
+      "url": "/img/gallery/trabajo-7.jpg",
+      "title": "Corte Shag",
+      "category": "Corte",
+      "description": "Corte en capas con mucho movimiento"
+    },
+    {
+      "id": 8,
+      "url": "/img/gallery/trabajo-8.jpg",
+      "title": "Color Fantasy",
+      "category": "Color",
+      "description": "Colores vibrantes y creativos"
+    },
+    {
+      "id": 9,
+      "url": "/img/gallery/trabajo-9.jpg",
+      "title": "Botox Capilar",
+      "category": "Tratamiento",
+      "description": "Tratamiento reconstructor con botox"
+    },
+    {
+      "id": 10,
+      "url": "/img/gallery/trabajo-10.jpg",
+      "title": "Trenza Cascada",
+      "category": "Peinado",
+      "description": "Peinado con trenzas decorativas"
+    },
+    {
+      "id": 11,
+      "url": "/img/gallery/trabajo-11.jpg",
+      "title": "Mechas Platinum",
+      "category": "Color",
+      "description": "Mechas platinadas con efecto natural"
+    },
+    {
+      "id": 12,
+      "url": "/img/gallery/trabajo-12.jpg",
+      "title": "Corte Pixie",
+      "category": "Corte",
+      "description": "Corte corto moderno y versátil"
+    },
+    {
+      "id": 13,
+      "url": "/img/gallery/trabajo-13.jpg",
+      "title": "Ondas Playeras",
+      "category": "Peinado",
+      "description": "Ondas naturales estilo beach waves"
+    },
+    {
+      "id": 14,
+      "url": "/img/gallery/trabajo-14.jpg",
+      "title": "Tratamiento Olaplex",
+      "category": "Tratamiento",
+      "description": "Reparación profunda del cabello"
+    },
+    {
+      "id": 15,
+      "url": "/img/gallery/trabajo-15.jpg",
+      "title": "Balayage Rosado",
+      "category": "Color",
+      "description": "Mechas con tonos rosados suaves"
+    },
+    {
+      "id": 16,
+      "url": "/img/gallery/trabajo-16.jpg",
+      "title": "Updo Elegante",
+      "category": "Peinado",
+      "description": "Recogido sofisticado para ocasiones especiales"
+    },
+    {
+      "id": 17,
+      "url": "/img/gallery/trabajo-17.jpg",
+      "title": "Long Bob",
+      "category": "Corte",
+      "description": "Bob largo con capas sutiles"
+    },
+    {
+      "id": 18,
+      "url": "/img/gallery/trabajo-18.jpg",
+      "title": "Color Chocolate",
+      "category": "Color",
+      "description": "Tinte en tonos chocolate con reflejos"
+    },
+    {
+      "id": 19,
+      "url": "/img/gallery/trabajo-19.jpg",
+      "title": "Balayage Caramelo",
+      "category": "Color",
+      "description": "Técnica de mechas suaves y naturales"
+    },
+    {
+      "id": 20,
+      "url": "/img/gallery/trabajo-20.jpg",
+      "title": "Alisado Profesional",
+      "category": "Tratamiento",
+      "description": "Tratamiento de alisado con keratina"
+    },
+    {
+      "id": 21,
+      "url": "/img/gallery/trabajo-21.jpg",
+      "title": "Bob Texturizado",
+      "category": "Corte",
+      "description": "Corte moderno con textura y movimiento"
+    },
+    {
+      "id": 22,
+      "url": "/img/gallery/trabajo-22.jpg",
+      "title": "Mechas Babylights",
+      "category": "Color",
+      "description": "Mechas finas y naturales"
+    },
+    {
+      "id": 23,
+      "url": "/img/gallery/trabajo-23.jpg",
+      "title": "Hidratación Profunda",
+      "category": "Tratamiento",
+      "description": "Tratamiento nutritivo e hidratante"
+    },
+    {
+      "id": 24,
+      "url": "/img/gallery/trabajo-24.jpg",
+      "title": "Peinado Romántico",
+      "category": "Peinado",
+      "description": "Recogido elegante para eventos"
+    },
+    {
+      "id": 25,
+      "url": "/img/gallery/trabajo-25.jpg",
+      "title": "Corte Shag",
+      "category": "Corte",
+      "description": "Corte en capas con mucho movimiento"
+    },
+    {
+      "id": 26,
+      "url": "/img/gallery/trabajo-26.jpg",
+      "title": "Color Fantasy",
+      "category": "Color",
+      "description": "Colores vibrantes y creativos"
+    },
+    {
+      "id": 27,
+      "url": "/img/gallery/trabajo-27.jpg",
+      "title": "Botox Capilar",
+      "category": "Tratamiento",
+      "description": "Tratamiento reconstructor con botox"
+    },
+    {
+      "id": 28,
+      "url": "/img/gallery/trabajo-28.jpg",
+      "title": "Trenza Cascada",
+      "category": "Peinado",
+      "description": "Peinado con trenzas decorativas"
+    }
+  ]
+}
