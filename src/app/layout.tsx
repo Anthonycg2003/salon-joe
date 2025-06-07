@@ -37,19 +37,17 @@ export default function RootLayout({
                   Inicio
                 </Link>
                 <Link
+                  href="/galeria"
+                  className="text-gray-700 hover:text-pink-600 transition-colors"
+                >
+                  Galería
+                </Link>
+                <Link
                   href="/services/turnos"
                   className="text-gray-700 hover:text-pink-600 transition-colors"
                 >
                   Reservar Turno
                 </Link>
-                <div className="relative group">
-                  <span className="text-gray-400 cursor-not-allowed flex items-center">
-                    Tazas Personalizadas
-                    <span className="ml-2 text-xs bg-pink-100 text-pink-600 px-2 py-1 rounded-full">
-                      Próximamente
-                    </span>
-                  </span>
-                </div>
               </div>
             </div>
           </nav>
