@@ -1,4 +1,31 @@
+# Salon Joe
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+
+## Estructura del Proyecto
+
+- **/src/app**: Rutas y páginas principales de la aplicación.
+- **/src/components/main-page**: Componentes reutilizables para las secciones principales de la página de inicio (`HeroSection`, `GallerySection`, `ServicesSection`, `MissionVisionSection`, `ContactSection`).
+- **/src/app/services/tazas**: Sección interactiva para personalizar tazas en 3D.
+- **/src/app/services/turnos**: Reserva de turnos.
+- **/src/app/galeria**: Galería de imágenes.
+- **/src/app/api/gallery**: API para la galería.
+- **/src/data**: Datos estáticos (por ejemplo, `jobs.json`).
+- **/src/styles**: Archivos de estilos globales.
+
+## Instalación
+
+Instala las dependencias necesarias:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+# or
+bun install
+```
 
 ## Getting Started
 
